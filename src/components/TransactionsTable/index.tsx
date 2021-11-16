@@ -1,10 +1,9 @@
-import { useContext } from 'react';
-import { TransactionsContext } from '../../TransactionsContext';
+import { useTransactions } from '../../hooks/useTransactions';
 import { Container } from './styles';
 
 export function TransactionsTable() {
   //precisa colocar a interface dessa maneira para indicar que o useState vai armazenar uma array de objetos
-  const { transactions } = useContext(TransactionsContext);
+  const { transactions } = useTransactions();
   return (
     <Container>
       <table>
